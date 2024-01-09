@@ -1,12 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import {
-  StyleSheet,
-  Text,
-  View,
-  Button,
-  TouchableOpacity,
-  Touchable,
-} from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export default function App() {
   return (
@@ -34,7 +27,7 @@ export default function App() {
         </View>
       </View>
       <View style={styles.container4}>
-        <View style={styles.container5}>
+        <View style={[styles.container5, { marginBottom: 10 }]}>
           <Text style={styles.text3}>Сүүний гарц</Text>
           <TouchableOpacity style={styles.button1}>
             <Text style={styles.text4}>+ more</Text>
@@ -49,11 +42,111 @@ export default function App() {
             </View>
             <Text style={styles.text6}>0л</Text>
           </View>
+          <View style={styles.container9}>
+            <Text style={styles.text4}>Өнөөдөр</Text>
+            <View style={styles.container7}>
+              <Text style={styles.text4}>10</Text>
+              <Text style={styles.text5}>идэвхтэй үнээ</Text>
+            </View>
+            <Text style={styles.text4}>10л</Text>
+          </View>
           <View></View>
         </View>
       </View>
-      <View style={styles.container4}></View>
-      <View style={styles.container4}></View>
+      <View style={styles.container4}>
+        <View style={styles.container5}>
+          <Text style={styles.text3}>Саалийн үнээний байдал</Text>
+        </View>
+        <View style={[styles.container8, { marginTop: 20 }]}>
+          <View style={styles.container10}>
+            <Text style={styles.text4}>0</Text>
+            <Text style={styles.text7}>Ширгэсэн</Text>
+          </View>
+          <View style={styles.container10}>
+            <Text style={styles.text4}>10</Text>
+            <Text style={styles.text7}>Саальтай</Text>
+          </View>
+          <View style={styles.container10}>
+            <Text style={styles.text6}>10</Text>
+            <Text style={styles.text7}>Сүү аваагүй</Text>
+          </View>
+          <View></View>
+        </View>
+      </View>
+      <View style={styles.container4}>
+        <View style={styles.container5}>
+          <Text style={styles.text3}>Үржүүлэг статус</Text>
+        </View>
+        <View style={[styles.container11, { marginTop: 20 }]}>
+          <View
+            style={[
+              { paddingTop: 5 },
+              { paddingLeft: 15 },
+              { paddingRight: 20 },
+              { width: "100%" },
+              { display: "flex" },
+              { flexDirection: "row" },
+              { justifyContent: "space-between" },
+            ]}
+          >
+            <View style={[{ alignItems: "center" }]}>
+              <Text
+                style={[styles.text7, { marginBottom: 10 }, { fontSize: 16 }]}
+              >
+                Хээлтүүлгэд бэлэн
+              </Text>
+              <Text style={styles.text4}>0</Text>
+              {/* <SvgUri width={200} height={200} uri={Unee} /> */}
+              <Image
+                style={{ width: 50, height: 50, objectFit: "contain" }}
+                source={require("./assets/svg/unee.png")}
+              />
+            </View>
+            <View style={[{ alignItems: "center" }]}>
+              <Text
+                style={[styles.text7, { marginBottom: 10 }, { fontSize: 16 }]}
+              >
+                Хээлтүүлсэн
+              </Text>
+              <Text style={styles.text4}>0</Text>
+            </View>
+            <View style={[{ alignItems: "center" }]}>
+              <Text
+                style={[styles.text7, { marginBottom: 10 }, { fontSize: 16 }]}
+              >
+                Төл тээсэн
+              </Text>
+              <Text style={styles.text4}>0</Text>
+            </View>
+          </View>
+          <View
+            style={[
+              { padding: 15 },
+              { width: "100%" },
+              { display: "flex" },
+              { flexDirection: "row" },
+              { justifyContent: "space-around" },
+            ]}
+          >
+            <View style={[{ alignItems: "center" }]}>
+              <Text
+                style={[styles.text7, { marginBottom: 10 }, { fontSize: 16 }]}
+              >
+                Ширгэсэн
+              </Text>
+              <Text style={styles.text4}>0</Text>
+            </View>
+            <View style={[{ alignItems: "center" }]}>
+              <Text
+                style={[styles.text7, { marginBottom: 10 }, { fontSize: 16 }]}
+              >
+                Цэвэр
+              </Text>
+              <Text style={styles.text4}>0</Text>
+            </View>
+          </View>
+        </View>
+      </View>
       <StatusBar style="auto" />
     </View>
   );
@@ -86,10 +179,10 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   container3: {
+    justifyContent: "space-around",
     width: "100%",
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-around",
   },
   container4: {
     display: "flex",
@@ -102,24 +195,78 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
+    alignItems: "center",
   },
   container6: {
-    width: "30%",
+    width: "35%",
+    height: 90,
     display: "flex",
     flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
     backgroundColor: "white",
+    borderWidth: 1,
+    borderColor: "grey",
+    borderRadius: 10,
+    elevation: 20,
   },
   container7: {
     display: "flex",
     flexDirection: "row",
+    alignItems: "center",
   },
   container8: {
+    marginTop: 5,
     width: "100%",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  container9: {
+    flex: 1,
+    marginLeft: 10,
+    height: 90,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "white",
+    borderWidth: 1,
+    borderColor: "grey",
+    borderRadius: 10,
+    elevation: 20,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.8,
+    shadowRadius: 1,
+  },
+  container10: {
+    width: "30%",
+    height: 90,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "white",
+    borderWidth: 1,
+    borderColor: "grey",
+    borderRadius: 10,
+  },
+  container11: {
+    width: "100%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "white",
+    borderWidth: 1,
+    borderColor: "grey",
+    borderRadius: 10,
   },
   button1: {
     padding: 5,
     borderRadius: 20,
-    elevation: 10,
+    elevation: 20,
     backgroundColor: "#e9e9e9",
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 1 },
@@ -164,9 +311,15 @@ const styles = StyleSheet.create({
   text5: {
     color: "#848282",
     fontWeight: "600",
+    marginLeft: 5,
   },
   text6: {
     color: "#848282",
+    fontWeight: "600",
+    fontSize: 17,
+  },
+  text7: {
+    color: "black",
     fontWeight: "600",
     fontSize: 17,
   },
