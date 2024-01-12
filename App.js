@@ -7,14 +7,14 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import Ashig_shim from "./components/Ashig_shim.js";
+import AshigShim from "./components/AshigShim.js";
 import FermdMaliinBurtgel from "./components/FermdMaliinBurtgel.js";
 
 export default function App() {
   return (
     <View>
       <FermdMaliinBurtgel />
-      {/* <Ashig_shim /> */}
+      {/* <AshigShim /> */}
     </View>
   );
 }

@@ -8,7 +8,7 @@ import {
   View,
 } from "react-native";
 
-export default function Ashig_shim() {
+export default function AshigShim() {
   return (
     <View style={styles.container}>
       <View style={styles.container1}>
