@@ -7,21 +7,13 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import FermdMaliinBurtgel from "./FermdMaliinBurtgel";
+import Tejeel from "./Tejeel";
+import { useState } from "react";
 
-export default function AshigShim() {
+const AshigComponent = () => {
   return (
-    <View style={styles.container}>
-      <View style={styles.container1}>
-        <TouchableOpacity style={styles.button1}>
-          <Text style={styles.text}>Ашиг шим</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button1}>
-          <Text style={styles.text}>фермд бүртгүүлсэн малын бүртгэл</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button1}>
-          <Text style={styles.text}>Тэжээл</Text>
-        </TouchableOpacity>
-      </View>
+    <View style={{ width: "100%" }}>
       <View style={styles.container2x}>
         <ImageBackground
           style={styles.container2}
@@ -69,7 +61,6 @@ export default function AshigShim() {
               source={require("../assets/img/unuudur.png")}
             />
           </View>
-          <View></View>
         </View>
       </View>
       <View style={styles.container4}>
@@ -176,6 +167,28 @@ export default function AshigShim() {
           </View>
         </View>
       </View>
+    </View>
+  );
+};
+
+export default function AshigShim() {
+  const [tab, setTab] = useState(0);
+  return (
+    <View style={styles.container}>
+      <View style={styles.container1}>
+        <TouchableOpacity style={styles.button1}>
+          <Text style={styles.text}>Ашиг шим</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button1}>
+          <Text style={styles.text}>фермд бүртгүүлсэн малын бүртгэл</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button1}>
+          <Text style={styles.text}>Тэжээл</Text>
+        </TouchableOpacity>
+      </View>
+      {tab === 0 && <Text>Comp1</Text>}
+      {tab === 1 && <Text>Comp2</Text>}
+      {tab === 2 && <Text>Comp3</Text>}
       <StatusBar style="auto" />
     </View>
   );
@@ -309,6 +322,16 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  chosenbutton: {
+    padding: 5,
+    borderRadius: 20,
+    elevation: 20,
+    backgroundColor: "#2072B2",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.8,
+    shadowRadius: 1,
+  },
   button1: {
     padding: 5,
     borderRadius: 20,
@@ -336,9 +359,15 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.8,
     shadowRadius: 1,
   },
+  chosentext: {
+    color: "white",
+    fontSize: 12,
+    fontWeight: "500",
+  },
   text: {
     color: "gray",
     fontSize: 13,
+    fontWeight: "500",
   },
   text1: {
     color: "white",
