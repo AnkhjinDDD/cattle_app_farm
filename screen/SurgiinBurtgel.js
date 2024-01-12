@@ -48,15 +48,13 @@ export default SurgiinBurtgel;
 
 const styles = StyleSheet.create({
   container: {
-    display: "flex",
+    width: "100%",
     marginTop: 50,
-    flexDirection: "column",
     backgroundColor: "white",
     justifyContent: "center",
     alignItems: "center",
   },
   container1: {
-    display: "flex",
     width: "93%",
     flexDirection: "row",
     justifyContent: "space-between",

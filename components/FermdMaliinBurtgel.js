@@ -86,18 +86,7 @@ const Cattle = ({ id, uulder, nas, zus, suuniiGarts, jin, suu, noos }) => {
 
 const FermdMaliinBurtgel = () => {
   return (
-    <View style={styles.container}>
-      <View style={styles.container1}>
-        <TouchableOpacity style={styles.button1}>
-          <Text style={styles.text}>Ашиг шим</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.chosenbutton}>
-          <Text style={styles.chosentext}>фермд бүртгүүлсэн малын бүртгэл</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button1}>
-          <Text style={styles.text}>Тэжээл</Text>
-        </TouchableOpacity>
-      </View>
+    <View style={{ width: "100%" }}>
       <View style={[styles.container2]}>
         <TextInput style={styles.search} placeholder="Хайх" />
         <TouchableOpacity style={[styles.button2]}>
@@ -132,25 +121,13 @@ const FermdMaliinBurtgel = () => {
 export default FermdMaliinBurtgel;
 
 const styles = StyleSheet.create({
-  container: {
-    marginTop: 50,
-    flexDirection: "column",
-    backgroundColor: "white",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  container1: {
-    display: "flex",
-    width: "90%",
-    flexDirection: "row",
-    justifyContent: "space-between",
-  },
   container2: {
-    width: "100%",
+    width: "95%",
     flexDirection: "row",
     justifyContent: "flex-end",
-    marginTop: 10,
+    marginTop: 20,
     marginRight: 30,
+    marginBottom: 10,
   },
   container3: {
     width: "100%",
@@ -160,26 +137,6 @@ const styles = StyleSheet.create({
     borderBottomColor: "#ececec",
     borderBottomWidth: 1,
   },
-  chosenbutton: {
-    padding: 5,
-    borderRadius: 20,
-    elevation: 20,
-    backgroundColor: "#2072B2",
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.8,
-    shadowRadius: 1,
-  },
-  button1: {
-    padding: 5,
-    borderRadius: 20,
-    elevation: 20,
-    backgroundColor: "#e9e9e9",
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.8,
-    shadowRadius: 1,
-  },
   button2: {
     paddingVertical: 7,
     paddingHorizontal: 6,
@@ -188,16 +145,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     borderTopLeftRadius: 0,
     borderBottomLeftRadius: 0,
-  },
-  chosentext: {
-    color: "white",
-    fontSize: 12,
-    fontWeight: "500",
-  },
-  text: {
-    color: "gray",
-    fontSize: 12,
-    fontWeight: "500",
   },
   text1: {
     color: "black",
@@ -210,7 +157,6 @@ const styles = StyleSheet.create({
   },
   search: {
     width: "30%",
-    // backgroundColor: "#F0F0F0",
     backgroundColor: "#e9e9e9",
     textAlign: "center",
     borderRadius: 20,

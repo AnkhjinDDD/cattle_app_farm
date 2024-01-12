@@ -7,13 +7,10 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import FermdMaliinBurtgel from "./FermdMaliinBurtgel";
-import Tejeel from "./Tejeel";
-import { useState } from "react";
 
-const AshigComponent = () => {
+const AshigShim = () => {
   return (
-    <View style={{ width: "100%" }}>
+    <View style={styles.container}>
       <View style={styles.container2x}>
         <ImageBackground
           style={styles.container2}
@@ -105,7 +102,7 @@ const AshigComponent = () => {
               { paddingLeft: 15 },
               { paddingRight: 20 },
               { width: "100%" },
-              { display: "flex" },
+
               { flexDirection: "row" },
               { justifyContent: "space-between" },
             ]}
@@ -143,7 +140,7 @@ const AshigComponent = () => {
               { paddingHorizontal: 20 },
               { paddingVertical: 5 },
               { width: "100%" },
-              { display: "flex" },
+
               { flexDirection: "row" },
               { justifyContent: "space-around" },
             ]}
@@ -167,52 +164,23 @@ const AshigComponent = () => {
           </View>
         </View>
       </View>
+      <StatusBar style="auto" />
     </View>
   );
 };
 
-export default function AshigShim() {
-  const [tab, setTab] = useState(0);
-  return (
-    <View style={styles.container}>
-      <View style={styles.container1}>
-        <TouchableOpacity style={styles.button1}>
-          <Text style={styles.text}>Ашиг шим</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button1}>
-          <Text style={styles.text}>фермд бүртгүүлсэн малын бүртгэл</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button1}>
-          <Text style={styles.text}>Тэжээл</Text>
-        </TouchableOpacity>
-      </View>
-      {tab === 0 && <Text>Comp1</Text>}
-      {tab === 1 && <Text>Comp2</Text>}
-      {tab === 2 && <Text>Comp3</Text>}
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+export default AshigShim;
 
 const styles = StyleSheet.create({
   container: {
-    display: "flex",
-    marginTop: 50,
-    flexDirection: "column",
+    width: "100%",
     backgroundColor: "white",
     justifyContent: "center",
     alignItems: "center",
   },
-  container1: {
-    display: "flex",
-    width: "93%",
-    flexDirection: "row",
-    justifyContent: "space-between",
-  },
   container2: {
     height: 140,
-    marginTop: 20,
-    flexDirection: "column",
+    marginTop: 10,
     alignItems: "center",
     justifyContent: "space-around",
     borderRadius: 10,
@@ -223,18 +191,14 @@ const styles = StyleSheet.create({
   container3: {
     justifyContent: "space-around",
     width: "100%",
-    display: "flex",
     flexDirection: "row",
   },
   container4: {
-    display: "flex",
-    flexDirection: "column",
     width: "95%",
     marginTop: 10,
   },
   container5: {
     width: "100%",
-    display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
@@ -242,25 +206,19 @@ const styles = StyleSheet.create({
   container6: {
     width: "35%",
     height: 90,
-    display: "flex",
-    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "white",
-    // borderWidth: 1,
-    // borderColor: "grey",
     borderRadius: 10,
     elevation: 20,
   },
   container7: {
-    display: "flex",
     flexDirection: "row",
     alignItems: "center",
   },
   container8: {
     marginTop: 5,
     width: "100%",
-    display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
   },
@@ -269,13 +227,10 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     paddingHorizontal: 20,
     height: 90,
-    display: "flex",
     flexDirection: "row",
     justifyContent: "flex-end",
     alignItems: "center",
     backgroundColor: "white",
-    // borderWidth: 1,
-    // borderColor: "grey",
     borderRadius: 10,
     elevation: 20,
     shadowColor: "#000",
@@ -286,13 +241,9 @@ const styles = StyleSheet.create({
   container10: {
     width: "30%",
     paddingVertical: 10,
-    display: "flex",
-    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "white",
-    // borderWidth: 1,
-    // borderColor: "grey",
     borderRadius: 10,
     elevation: 20,
     shadowColor: "#000",
@@ -302,13 +253,9 @@ const styles = StyleSheet.create({
   },
   container11: {
     width: "100%",
-    display: "flex",
-    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "white",
-    // borderWidth: 1,
-    // borderColor: "grey",
     borderRadius: 10,
     elevation: 20,
     shadowColor: "#000",
@@ -317,20 +264,8 @@ const styles = StyleSheet.create({
     shadowRadius: 1,
   },
   container12: {
-    display: "flex",
-    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-  },
-  chosenbutton: {
-    padding: 5,
-    borderRadius: 20,
-    elevation: 20,
-    backgroundColor: "#2072B2",
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.8,
-    shadowRadius: 1,
   },
   button1: {
     padding: 5,
@@ -346,7 +281,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "white",
     width: "40%",
-    display: "flex",
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 10,
@@ -358,16 +292,6 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.8,
     shadowRadius: 1,
-  },
-  chosentext: {
-    color: "white",
-    fontSize: 12,
-    fontWeight: "500",
-  },
-  text: {
-    color: "gray",
-    fontSize: 13,
-    fontWeight: "500",
   },
   text1: {
     color: "white",
