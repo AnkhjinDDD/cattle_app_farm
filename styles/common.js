@@ -1,5 +1,8 @@
 import { StyleSheet } from "react-native";
 
 export const commonStyles = StyleSheet.create({
-  flex: {},
+  rowSB: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
 });

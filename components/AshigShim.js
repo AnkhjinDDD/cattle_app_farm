@@ -174,7 +174,6 @@ export default AshigShim;
 const styles = StyleSheet.create({
   container: {
     width: "100%",
-    backgroundColor: "white",
     justifyContent: "center",
     alignItems: "center",
   },
