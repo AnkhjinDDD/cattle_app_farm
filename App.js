@@ -8,7 +8,9 @@ import {
   View,
 } from "react-native";
 import SurgiinBurtgel from "./screen/SurgiinBurtgel.js";
+import NiitHemjeeOruulah from "./screen/NiitHemjeeOruulah.js";
 
 export default function App() {
-  return <SurgiinBurtgel />;
+  return <NiitHemjeeOruulah />;
+  // return <SurgiinBurtgel />;
 }
