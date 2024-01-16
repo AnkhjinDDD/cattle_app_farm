@@ -61,10 +61,10 @@ const AshigShim = () => {
         </View>
       </View>
       <View style={styles.container4}>
-        <View style={styles.container5}>
+        <View style={(styles.container5, { marginTop: 10 })}>
           <Text style={styles.text3}>Саалийн үнээний байдал</Text>
         </View>
-        <View style={[styles.container8, { marginTop: 20 }]}>
+        <View style={[styles.container8, { marginTop: 10 }]}>
           <View style={styles.container10}>
             <Image
               style={{ width: 40, height: 40, objectFit: "contain" }}
@@ -92,10 +92,10 @@ const AshigShim = () => {
         </View>
       </View>
       <View style={styles.container4}>
-        <View style={styles.container5}>
+        <View style={(styles.container5, { marginTop: 10 })}>
           <Text style={styles.text3}>Үржүүлэг статус</Text>
         </View>
-        <View style={[styles.container11, { marginTop: 20 }]}>
+        <View style={[styles.container11, { marginTop: 10 }]}>
           <View
             style={[
               { paddingTop: 5 },
