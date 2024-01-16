@@ -56,6 +56,7 @@ const NiitHemjeeOruulah = () => {
               flex: 1,
               textAlign: "right",
             }}
+            defaultValue="0"
             value={garts}
             onChange={(first) => {
               setGarts(first);

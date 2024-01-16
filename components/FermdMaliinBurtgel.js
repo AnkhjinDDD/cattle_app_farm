@@ -10,7 +10,7 @@ import {
   FlatList,
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import React from "react";
+import React, { useState } from "react";
 import CattleList from "./CattleList";
 
 const data = [
@@ -53,11 +53,26 @@ const data = [
 ];
 
 const FermdMaliinBurtgel = () => {
+  const [text, setText] = useState("");
+
+  const [filteredData, setFilteredData] = useState(data);
+
   return (
     <View style={{ width: "100%" }}>
       <View style={[styles.container2]}>
-        <TextInput style={styles.search} placeholder="Хайх" />
-        <TouchableOpacity style={[styles.button2]}>
+        <TextInput
+          style={styles.search}
+          placeholder="Хайх"
+          onChangeText={(e) => {
+            setText(e);
+          }}
+        />
+        <TouchableOpacity
+          style={[styles.button2]}
+          onPress={() => {
+            setFilteredData(data.filter((item) => item.id.includes(text)));
+          }}
+        >
           <Image
             style={{ width: 19, height: 19, objectFit: "contain" }}
             source={require("../assets/img/search.png")}
@@ -66,7 +81,7 @@ const FermdMaliinBurtgel = () => {
       </View>
       <View style={styles.list}>
         <FlatList
-          data={data}
+          data={filteredData}
           renderItem={({ item }) => (
             <CattleList
               id={` ${item.id}`}

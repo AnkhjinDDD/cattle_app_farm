@@ -210,6 +210,10 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     borderRadius: 10,
     elevation: 20,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.8,
+    shadowRadius: 1,
   },
   container7: {
     flexDirection: "row",
@@ -269,8 +273,8 @@ const styles = StyleSheet.create({
   button1: {
     padding: 5,
     borderRadius: 20,
-    elevation: 20,
     backgroundColor: "#e9e9e9",
+    elevation: 20,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.8,
