@@ -2,6 +2,8 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import EronhiiMedeelel from "../components/EronhiiMedeelel";
+import SuuniiGarts from "../components/SuuniiGarts";
+import Urjuuleg from "../components/Urjuuleg";
 
 const Cattle = () => {
   const [tab, setTab] = useState(0);
@@ -11,7 +13,7 @@ const Cattle = () => {
       <View
         style={{
           paddingTop: 60,
-          paddingBottom: 10,
+          paddingBottom: 15,
           backgroundColor: "#D4D4D4",
           alignItems: "center",
           borderRadius: 10,
@@ -27,7 +29,7 @@ const Cattle = () => {
             flexDirection: "row",
             alignItems: "center",
             width: "80%",
-            marginBottom: 20,
+            marginBottom: 30,
           }}
         >
           <Image
@@ -47,8 +49,8 @@ const Cattle = () => {
         <View
           style={{
             flexDirection: "row",
-            width: "100%",
-            justifyContent: "space-around",
+            width: "85%",
+            justifyContent: "space-between",
           }}
         >
           <TouchableOpacity
@@ -78,6 +80,8 @@ const Cattle = () => {
         </View>
       </View>
       {tab === 0 && <EronhiiMedeelel />}
+      {tab === 1 && <SuuniiGarts />}
+      {tab === 2 && <Urjuuleg />}
       <StatusBar style="auto" />
     </View>
   );

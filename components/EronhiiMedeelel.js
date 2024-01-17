@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import React from "react";
 
 const EronhiiMedeelel = () => {
@@ -49,7 +49,7 @@ const EronhiiMedeelel = () => {
           Эрүүл мэнд Түүх
         </Text>
       </View>
-      <View
+      <TouchableOpacity
         style={{
           height: 92,
           borderRadius: 10,
@@ -68,7 +68,7 @@ const EronhiiMedeelel = () => {
         <Text style={{ fontSize: 28, fontWeight: "bold", color: "#2072B2" }}>
           2
         </Text>
-      </View>
+      </TouchableOpacity>
     </View>
   );
 };

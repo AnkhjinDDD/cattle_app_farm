@@ -1,9 +1,9 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 
 const CattleList = ({ id, uulder, nas, zus, suuniiGarts, jin, suu, noos }) => {
   return (
-    <View style={styles.container3}>
+    <TouchableOpacity style={styles.container3}>
       <Image
         style={{
           width: 106,
@@ -30,7 +30,7 @@ const CattleList = ({ id, uulder, nas, zus, suuniiGarts, jin, suu, noos }) => {
           </View>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
