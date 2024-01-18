@@ -145,11 +145,36 @@ const Tejeel = () => {
           />
         </TouchableOpacity>
       </View>
+      {test2 && (
+        <View
+          style={{
+            width: "100%",
+            alignItems: "flex-end",
+            paddingRight: 20,
+            marginTop: 5,
+            marginBottom: 10,
+          }}
+        >
+          <TouchableOpacity
+            style={{
+              backgroundColor: "#01B248",
+              paddingVertical: 5,
+              paddingHorizontal: 10,
+              borderRadius: 20,
+            }}
+          >
+            <Text style={{ color: "white", fontSize: 12, fontWeight: "600" }}>
+              Үргэлжлүүлэх
+            </Text>
+          </TouchableOpacity>
+        </View>
+      )}
       <View
         style={{
           flexDirection: "row",
           justifyContent: "space-between",
           alignItems: "center",
+          marginBottom: 5,
         }}
       >
         <Text

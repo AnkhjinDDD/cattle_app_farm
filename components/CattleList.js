@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
   container3: {
     width: "100%",
     flexDirection: "row",
-    marginTop: 20,
+    paddingTop: 20,
     paddingBottom: 20,
     borderBottomColor: "#ececec",
     borderBottomWidth: 1,
