@@ -16,9 +16,9 @@ import TejeelZartsuulalt from "./screen/TejeelZartsuulalt.js";
 
 export default function App() {
   // return <TejeelZartsuulalt />;
-  // return <Cattle />;
+  return <Cattle />;
   // return <AshigShimiinTailan />;
   // return <UneeTusBureer />;
   // return <NiitHemjeeOruulah />;
-  return <SurgiinBurtgel />;
+  // return <SurgiinBurtgel />;
 }

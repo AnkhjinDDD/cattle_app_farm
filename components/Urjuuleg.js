@@ -25,122 +25,45 @@ const Urjuuleg = () => {
             flexWrap: "wrap",
           }}
         >
-          <TouchableOpacity
-            style={{
-              width: "31%",
-              alignItems: "center",
-              justifyContent: "space-between",
-              backgroundColor: "white",
-              paddingVertical: 10,
-              paddingHorizontal: 10,
-              marginBottom: 20,
-              elevation: 20,
-              shadowColor: "#000",
-              shadowOffset: { width: 0, height: 1 },
-              shadowOpacity: 0.8,
-              shadowRadius: 1,
-              borderRadius: 10,
-            }}
-          >
+          <TouchableOpacity style={styles.box1}>
             <View style={{ flexDirection: "row" }}>
               <Text
-                style={{
-                  fontSize: 12,
-                  fontWeight: "600",
-                  textAlign: "center",
-                  marginRight: heeltuulged ? 1 : 10,
-                }}
+                style={(styles.text1, { marginRight: heeltuulged ? 1 : 10 })}
               >
                 Хээлтүүлгэд бэлэн
               </Text>
               {heeltuulged && (
                 <Image
-                  style={{
-                    width: 8,
-                    height: 8,
-                    objectFit: "contain",
-                    marginLeft: 3,
-                  }}
+                  style={(styles.activeImage, { marginLeft: 3 })}
                   source={require("../assets/img/active.png")}
                 />
               )}
             </View>
             <Image
-              style={{
-                width: 41,
-                height: 32.17,
-                objectFit: "contain",
-                marginTop: 2,
-              }}
+              style={(styles.uneeImage, { marginTop: 2 })}
               source={require("../assets/img/unee.png")}
             />
           </TouchableOpacity>
-          <TouchableOpacity
-            style={{
-              width: "31%",
-              alignItems: "center",
-              justifyContent: "space-between",
-              backgroundColor: "white",
-              paddingVertical: 10,
-              paddingHorizontal: 10,
-              marginBottom: 20,
-              elevation: 20,
-              shadowColor: "#000",
-              shadowOffset: { width: 0, height: 1 },
-              shadowOpacity: 0.8,
-              shadowRadius: 1,
-              borderRadius: 10,
-            }}
-          >
+          <TouchableOpacity style={styles.box1}>
             <View style={{ flexDirection: "row" }}>
               <Text
-                style={{
-                  fontSize: 12,
-                  fontWeight: "600",
-                  textAlign: "center",
-                  marginRight: heeltuulsen ? 0 : 9,
-                }}
+                style={(styles.text1, { marginRight: heeltuulsen ? 0 : 9 })}
               >
                 Хээлтүүлсэн
               </Text>
               {heeltuulsen && (
                 <Image
-                  style={{
-                    width: 8,
-                    height: 8,
-                    objectFit: "contain",
-                    marginLeft: 3,
-                  }}
+                  style={(styles.activeImage, { marginLeft: 3 })}
                   source={require("../assets/img/active.png")}
                 />
               )}
             </View>
             <Image
-              style={{
-                width: 41,
-                height: 32.17,
-                objectFit: "contain",
-              }}
+              style={styles.uneeImage}
               source={require("../assets/img/unee.png")}
             />
           </TouchableOpacity>
-          <TouchableOpacity
-            style={{
-              width: "31%",
-              alignItems: "center",
-              justifyContent: "space-between",
-              backgroundColor: "white",
-              paddingVertical: 10,
-              paddingHorizontal: 10,
-              marginBottom: 20,
-              elevation: 20,
-              shadowColor: "#000",
-              shadowOffset: { width: 0, height: 1 },
-              shadowOpacity: 0.8,
-              shadowRadius: 1,
-              borderRadius: 10,
-            }}
-          >
+          <TouchableOpacity style={styles.box1}>
             <View
               style={{
                 flexDirection: "row",
@@ -148,53 +71,22 @@ const Urjuuleg = () => {
                 width: "90%",
               }}
             >
-              <Text
-                style={{
-                  fontSize: 12,
-                  fontWeight: "600",
-                  textAlign: "center",
-                  marginRight: heeltei ? 10 : 23,
-                }}
-              >
+              <Text style={(styles.text1, { marginRight: heeltei ? 10 : 23 })}>
                 Хээлтэй
               </Text>
               {heeltei && (
                 <Image
-                  style={{
-                    width: 8,
-                    height: 8,
-                    objectFit: "contain",
-                    marginLeft: 5,
-                  }}
+                  style={(styles.activeImage, { marginLeft: 5 })}
                   source={require("../assets/img/active.png")}
                 />
               )}
             </View>
             <Image
-              style={{
-                width: 41,
-                height: 32.17,
-                objectFit: "contain",
-              }}
+              style={styles.uneeImage}
               source={require("../assets/img/unee.png")}
             />
           </TouchableOpacity>
-          <TouchableOpacity
-            style={{
-              width: "31%",
-              alignItems: "center",
-              justifyContent: "space-between",
-              backgroundColor: "white",
-              paddingVertical: 10,
-              paddingHorizontal: 10,
-              elevation: 20,
-              shadowColor: "#000",
-              shadowOffset: { width: 0, height: 1 },
-              shadowOpacity: 0.8,
-              shadowRadius: 1,
-              borderRadius: 10,
-            }}
-          >
+          <TouchableOpacity style={styles.box2}>
             <View
               style={{
                 flexDirection: "row",
@@ -203,53 +95,23 @@ const Urjuuleg = () => {
               }}
             >
               <Text
-                style={{
-                  fontSize: 12,
-                  fontWeight: "600",
-                  textAlign: "center",
-                  marginRight: orgilsaamtai ? 10 : 23,
-                }}
+                style={(styles.text1, { marginRight: orgilsaamtai ? 10 : 23 })}
               >
                 Оргил саамтай
               </Text>
               {orgilsaamtai && (
                 <Image
-                  style={{
-                    width: 8,
-                    height: 8,
-                    objectFit: "contain",
-                    marginLeft: 5,
-                  }}
+                  style={(styles.activeImage, { marginLeft: 5 })}
                   source={require("../assets/img/active.png")}
                 />
               )}
             </View>
             <Image
-              style={{
-                width: 41,
-                height: 32.17,
-                objectFit: "contain",
-                marginTop: 10,
-              }}
+              style={(styles.uneeImage, { marginTop: 10 })}
               source={require("../assets/img/unee.png")}
             />
           </TouchableOpacity>
-          <TouchableOpacity
-            style={{
-              width: "31%",
-              alignItems: "center",
-              justifyContent: "space-between",
-              backgroundColor: "white",
-              paddingVertical: 10,
-              paddingHorizontal: 10,
-              elevation: 20,
-              shadowColor: "#000",
-              shadowOffset: { width: 0, height: 1 },
-              shadowOpacity: 0.8,
-              shadowRadius: 1,
-              borderRadius: 10,
-            }}
-          >
+          <TouchableOpacity style={styles.box2}>
             <View
               style={{
                 flexDirection: "row",
@@ -269,23 +131,13 @@ const Urjuuleg = () => {
               </Text>
               {shirgesen && (
                 <Image
-                  style={{
-                    width: 8,
-                    height: 8,
-                    objectFit: "contain",
-                    marginLeft: 5,
-                  }}
+                  style={(styles.activeImage, { marginLeft: 5 })}
                   source={require("../assets/img/active.png")}
                 />
               )}
             </View>
             <Image
-              style={{
-                width: 41,
-                height: 32.17,
-                objectFit: "contain",
-                marginTop: 25,
-              }}
+              style={(styles.uneeImage, { marginTop: 25 })}
               source={require("../assets/img/unee.png")}
             />
           </TouchableOpacity>
@@ -326,22 +178,7 @@ const Urjuuleg = () => {
             marginTop: 10,
           }}
         >
-          <TouchableOpacity
-            style={{
-              width: "31%",
-              alignItems: "center",
-              justifyContent: "space-between",
-              backgroundColor: "white",
-              paddingVertical: 10,
-              paddingHorizontal: 10,
-              elevation: 20,
-              shadowColor: "#000",
-              shadowOffset: { width: 0, height: 1 },
-              shadowOpacity: 0.8,
-              shadowRadius: 1,
-              borderRadius: 10,
-            }}
-          >
+          <TouchableOpacity style={styles.box2}>
             <View
               style={{
                 flexDirection: "row",
@@ -361,42 +198,17 @@ const Urjuuleg = () => {
               </Text>
               {heelAvsan && (
                 <Image
-                  style={{
-                    width: 8,
-                    height: 8,
-                    objectFit: "contain",
-                    marginLeft: 5,
-                  }}
+                  style={(styles.activeImage, { marginLeft: 5 })}
                   source={require("../assets/img/active.png")}
                 />
               )}
             </View>
             <Image
-              style={{
-                width: 41,
-                height: 32.17,
-                objectFit: "contain",
-                marginTop: 20,
-              }}
+              style={(styles.uneeImage, { marginTop: 20 })}
               source={require("../assets/img/unee.png")}
             />
           </TouchableOpacity>
-          <TouchableOpacity
-            style={{
-              width: "31%",
-              alignItems: "center",
-              justifyContent: "space-between",
-              backgroundColor: "white",
-              paddingVertical: 10,
-              paddingHorizontal: 10,
-              elevation: 20,
-              shadowColor: "#000",
-              shadowOffset: { width: 0, height: 1 },
-              shadowOpacity: 0.8,
-              shadowRadius: 1,
-              borderRadius: 10,
-            }}
-          >
+          <TouchableOpacity style={styles.box2}>
             <View
               style={{
                 flexDirection: "row",
@@ -416,42 +228,17 @@ const Urjuuleg = () => {
               </Text>
               {heelHayasan && (
                 <Image
-                  style={{
-                    width: 8,
-                    height: 8,
-                    objectFit: "contain",
-                    marginLeft: 5,
-                  }}
+                  style={(styles.activeImage, { marginLeft: 5 })}
                   source={require("../assets/img/active.png")}
                 />
               )}
             </View>
             <Image
-              style={{
-                width: 41,
-                height: 32.17,
-                objectFit: "contain",
-                marginTop: 20,
-              }}
+              style={(styles.uneeImage, { marginTop: 20 })}
               source={require("../assets/img/unee.png")}
             />
           </TouchableOpacity>
-          <TouchableOpacity
-            style={{
-              width: "31%",
-              alignItems: "center",
-              justifyContent: "space-between",
-              backgroundColor: "white",
-              paddingVertical: 10,
-              paddingHorizontal: 10,
-              elevation: 20,
-              shadowColor: "#000",
-              shadowOffset: { width: 0, height: 1 },
-              shadowOpacity: 0.8,
-              shadowRadius: 1,
-              borderRadius: 10,
-            }}
-          >
+          <TouchableOpacity style={styles.box2}>
             <View
               style={{
                 flexDirection: "row",
@@ -471,23 +258,13 @@ const Urjuuleg = () => {
               </Text>
               {heelAvaagui && (
                 <Image
-                  style={{
-                    width: 8,
-                    height: 8,
-                    objectFit: "contain",
-                    marginLeft: 5,
-                  }}
+                  style={(styles.activeImage, { marginLeft: 5 })}
                   source={require("../assets/img/active.png")}
                 />
               )}
             </View>
             <Image
-              style={{
-                width: 41,
-                height: 32.17,
-                objectFit: "contain",
-                marginTop: 8,
-              }}
+              style={(styles.uneeImage, { marginTop: 8 })}
               source={require("../assets/img/unee.png")}
             />
           </TouchableOpacity>
@@ -499,4 +276,49 @@ const Urjuuleg = () => {
 
 export default Urjuuleg;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  box1: {
+    width: "31%",
+    alignItems: "center",
+    justifyContent: "space-between",
+    backgroundColor: "white",
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    marginBottom: 20,
+    elevation: 20,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.8,
+    shadowRadius: 1,
+    borderRadius: 10,
+  },
+  box2: {
+    width: "31%",
+    alignItems: "center",
+    justifyContent: "space-between",
+    backgroundColor: "white",
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    elevation: 20,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.8,
+    shadowRadius: 1,
+    borderRadius: 10,
+  },
+  uneeImage: {
+    width: 41,
+    height: 32.17,
+    objectFit: "contain",
+  },
+  activeImage: {
+    width: 8,
+    height: 8,
+    objectFit: "contain",
+  },
+  text1: {
+    fontSize: 12,
+    fontWeight: "600",
+    textAlign: "center",
+  },
+});
