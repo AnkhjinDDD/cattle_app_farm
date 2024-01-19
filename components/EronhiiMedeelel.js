@@ -51,10 +51,13 @@ const EronhiiMedeelel = () => {
       </View>
       <TouchableOpacity
         style={{
-          height: 92,
+          height: 98,
+          width: 117,
+          justifyContent: "space-between",
           borderRadius: 10,
           backgroundColor: "white",
-          paddingVertical: 10,
+          paddingTop: 15,
+          paddingBottom: 20,
           paddingHorizontal: 10,
           alignItems: "center",
           elevation: 20,

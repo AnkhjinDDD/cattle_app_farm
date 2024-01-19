@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import EronhiiMedeelel from "../components/EronhiiMedeelel";
 import SuuniiGarts from "../components/SuuniiGarts";
-import Urjuuleg from "../components/Urjuuleg";
+import Urjuuleg from "../components/Urjuuleg1";
 
 const Cattle = () => {
   const [tab, setTab] = useState(0);
