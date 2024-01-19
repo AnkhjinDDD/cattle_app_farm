@@ -13,11 +13,15 @@ import UneeTusBureer from "./screen/UneeTusBureer.js";
 import AshigShimiinTailan from "./screen/AshigShimiinTailan.js";
 import Cattle from "./screen/Cattle.js";
 import TejeelZartsuulalt from "./screen/TejeelZartsuulalt.js";
+import TuliinToo from "./screen/TuliinToo.js";
+import UrjuulgiinTuuh from "./screen/UrjuulgiinTuuh.js";
 
 export default function App() {
+  // return <UrjuulgiinTuuh />;
+  // return <TuliinToo />;
   // return <TejeelZartsuulalt />;
-  return <Cattle />;
-  // return <AshigShimiinTailan />;
+  // return <Cattle />;
+  return <AshigShimiinTailan />;
   // return <UneeTusBureer />;
   // return <NiitHemjeeOruulah />;
   // return <SurgiinBurtgel />;

@@ -19,23 +19,23 @@ const AshigShimiinTailan = () => {
   const data = [
     {
       date: "09/11/2023",
-      size: 5,
-      amount: 10,
+      status: "Хээлтүүлсэн",
+      code: 15445,
     },
     {
       date: "19/12/2023",
-      size: 15,
-      amount: 10,
+      status: "Хээлтэй",
+      code: 15446,
     },
     {
       date: "23/12/2023",
-      size: 25,
-      amount: 10,
+      status: "Сааж байгаа",
+      code: 15447,
     },
     {
       date: "25/12/2023",
-      size: 35,
-      amount: 10,
+      status: "Сааж байгаа",
+      code: 15448,
     },
   ];
 
@@ -80,14 +80,15 @@ const AshigShimiinTailan = () => {
       <View
         style={{
           flexDirection: "row",
-          width: "85%",
+          width: "90%",
           justifyContent: "space-between",
+          paddingRight: 35,
           marginBottom: 10,
         }}
       >
         <Text style={{ fontSize: 14, fontWeight: "600" }}>Он сар өдөр</Text>
-        <Text style={{ fontSize: 14, fontWeight: "600" }}>Хэмжээ</Text>
-        <Text style={{ fontSize: 14, fontWeight: "600" }}>Үнээний тоо</Text>
+        <Text style={{ fontSize: 14, fontWeight: "600" }}>Статус</Text>
+        <Text style={{ fontSize: 14, fontWeight: "600" }}>код</Text>
       </View>
       {calendar ? (
         <View
@@ -133,9 +134,10 @@ const AshigShimiinTailan = () => {
         <View
           style={{
             backgroundColor: "#F0F5FF",
-            width: "90%",
+            width: "100%",
             borderRadius: 10,
-            paddingHorizontal: 10,
+            paddingHorizontal: 15,
+            alignItems: "center",
           }}
         >
           <FlatList
@@ -146,7 +148,6 @@ const AshigShimiinTailan = () => {
                   flexDirection: "row",
                   justifyContent: "space-between",
                   marginVertical: 10,
-                  marginRight: 15,
                 }}
               >
                 <Text
@@ -165,7 +166,7 @@ const AshigShimiinTailan = () => {
                     fontWeight: "700",
                   }}
                 >
-                  {item.size}л
+                  {item.status}
                 </Text>
                 <Text
                   style={{
@@ -174,7 +175,7 @@ const AshigShimiinTailan = () => {
                     fontWeight: "700",
                   }}
                 >
-                  {item.amount} үнээ
+                  ID: {item.code}
                 </Text>
               </View>
             )}
