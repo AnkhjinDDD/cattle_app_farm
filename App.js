@@ -15,13 +15,17 @@ import Cattle from "./screen/Cattle.js";
 import TejeelZartsuulalt from "./screen/TejeelZartsuulalt.js";
 import TuliinToo from "./screen/TuliinToo.js";
 import UrjuulgiinTuuh from "./screen/UrjuulgiinTuuh.js";
+import HeelAvsan from "./screen/HeelAvsan.js";
+import HeelHayasan from "./screen/HeelHaysan.js";
+import HeelAvaagui from "./screen/HeelAvaagui.js";
 
 export default function App() {
+  return <HeelAvsan />;
   // return <UrjuulgiinTuuh />;
   // return <TuliinToo />;
   // return <TejeelZartsuulalt />;
   // return <Cattle />;
-  return <AshigShimiinTailan />;
+  // return <AshigShimiinTailan />;
   // return <UneeTusBureer />;
   // return <NiitHemjeeOruulah />;
   // return <SurgiinBurtgel />;
