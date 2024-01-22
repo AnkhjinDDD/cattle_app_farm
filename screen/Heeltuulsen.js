@@ -59,14 +59,16 @@ const HeelAvaagui = () => {
   const [calendar, setCalendar] = useState(false);
   const formattedDate = moment(date).format("DD/MM/YYYY");
   const [tuluv, setTuluv] = useState(true);
-  const [etseg, setEtseg] = useState({ id: "" });
+  const [etseg, setEtseg] = useState([{ id: "" }]);
   const [etseggui, setEtseggui] = useState(false);
   const [etsegTab, setEtsegTab] = useState(false);
 
   const choose = (e) => {
-    setEtseg({ id: e });
+    console.log(e);
+    setEtseg(data.filter((thing) => thing.id.includes(e)));
+    setEtseggui(false);
     setEtsegTab(false);
-    console.log(etseg.id);
+    console.log(etseg[0].id);
   };
 
   return (
@@ -313,7 +315,7 @@ const HeelAvaagui = () => {
               >
                 <TouchableOpacity
                   style={[
-                    etseg.id && styles.chosenButton,
+                    etseg[0].id && styles.chosenButton,
                     {
                       flex: 1,
                       alignItems: "center",
@@ -336,7 +338,7 @@ const HeelAvaagui = () => {
                         fontWeight: "600",
                         color: "#2072B2",
                       },
-                      etseg.id && styles.chosenText,
+                      etseg[0].id && styles.chosenText,
                     ]}
                   >
                     Сонгох
@@ -358,6 +360,7 @@ const HeelAvaagui = () => {
                   ]}
                   onPress={() => {
                     setEtseggui(true);
+                    setEtseg([{ id: "" }]);
                   }}
                 >
                   <Text
@@ -375,6 +378,17 @@ const HeelAvaagui = () => {
                   </Text>
                 </TouchableOpacity>
               </View>
+              {etseg[0].id && (
+                <CattleList
+                  id={` ${etseg[0].id}`}
+                  uulder={etseg[0].uulder}
+                  nas={etseg[0].nas}
+                  zus={etseg[0].zus}
+                  jin={etseg[0].jin}
+                  suu={etseg[0].suu}
+                  noos={etseg[0].noos}
+                />
+              )}
             </View>
           </View>
         )}
