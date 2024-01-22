@@ -11,9 +11,14 @@ const CattleList = ({
   suu,
   noos,
   test,
+  tap,
 }) => {
   return (
-    <TouchableOpacity style={styles.container3} onLongPress={test}>
+    <TouchableOpacity
+      style={styles.container3}
+      onLongPress={test}
+      onPress={tap}
+    >
       <Image
         style={{
           width: 106,

@@ -21,9 +21,11 @@ import HeelAvaagui from "./screen/HeelAvaagui.js";
 import Heeltei from "./screen/Heeltei.js";
 import Shirgesen from "./screen/Shirgesen.js";
 import Heeltuulged from "./screen/Heeltuulged.js";
+import Heeltuulsen from "./screen/Heeltuulsen.js";
 
 export default function App() {
-  return <Heeltuulged />;
+  return <Heeltuulsen />;
+  // return <Heeltuulged />;
   // return <Shirgesen />;
   // return <Heeltei />;
   // return <HeelAvaagui />;

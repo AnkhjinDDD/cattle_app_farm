@@ -4,7 +4,7 @@ import { StatusBar } from "expo-status-bar";
 import moment from "moment";
 import CalendarPicker from "react-native-calendar-picker";
 
-const Shirgesen = () => {
+const Heeltuulged = () => {
   const [date, setDate] = useState(new Date());
   const [calendar, setCalendar] = useState(false);
   const formattedDate = moment(date).format("DD/MM/YYYY");
@@ -297,6 +297,6 @@ const Shirgesen = () => {
   );
 };
 
-export default Shirgesen;
+export default Heeltuulged;
 
 const styles = StyleSheet.create({});
