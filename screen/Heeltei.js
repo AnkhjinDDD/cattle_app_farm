@@ -4,7 +4,7 @@ import { StatusBar } from "expo-status-bar";
 import moment from "moment";
 import CalendarPicker from "react-native-calendar-picker";
 
-const HeelAvsan = () => {
+const HeelAvaagui = () => {
   const [date, setDate] = useState(new Date());
   const [calendar, setCalendar] = useState(false);
   const formattedDate = moment(date).format("DD/MM/YYYY");
@@ -81,11 +81,41 @@ const HeelAvsan = () => {
             }}
             source={require("../assets/img/unee.png")}
           />
-          <Text style={{ fontSize: 16, fontWeight: "600" }}>Хээл авсан</Text>
+          <Text style={{ fontSize: 16, fontWeight: "600" }}>Хээлтэй</Text>
         </View>
         <View style={{ width: "85%", marginTop: 15 }}>
           <Text style={{ fontSize: 16, fontWeight: "600" }}>
-            Хээл авсан огноо
+            Тооцоолсон огноо түүх
+          </Text>
+          <View
+            style={{
+              backgroundColor: "#9CC7E9",
+              paddingLeft: 20,
+              paddingVertical: 10,
+              borderRadius: 5,
+              marginTop: 5,
+              marginBottom: 10,
+            }}
+          >
+            <Text style={{ fontSize: 15, fontWeight: "bold", color: "white" }}>
+              11/09/2023
+            </Text>
+          </View>
+          <View
+            style={{
+              backgroundColor: "#9CC7E9",
+              paddingLeft: 20,
+              paddingVertical: 10,
+              borderRadius: 5,
+              marginBottom: 30,
+            }}
+          >
+            <Text style={{ fontSize: 15, fontWeight: "bold", color: "white" }}>
+              12/11/2023
+            </Text>
+          </View>
+          <Text style={{ fontSize: 16, fontWeight: "600" }}>
+            Хээл авсан өдөр
           </Text>
           <View
             style={{
@@ -167,7 +197,9 @@ const HeelAvsan = () => {
               />
             </View>
           ) : null}
-          <Text style={{ fontSize: 16, fontWeight: "600" }}>Төллөх огноо</Text>
+          <Text style={{ fontSize: 16, fontWeight: "600" }}>
+            Хээл дуусах өдөр
+          </Text>
           <View style={{ flexDirection: "row", alignItems: "center" }}>
             <TouchableOpacity
               style={{
@@ -178,13 +210,13 @@ const HeelAvsan = () => {
                 width: "85%",
                 marginVertical: 5,
                 marginRight: 10,
-                borderBottomColor: "#2072B2",
+                borderBottomColor: "#999A9B",
                 borderBottomWidth: 1,
               }}
             >
               <Text
                 style={{
-                  color: "#2072B2",
+                  color: "#999A9B",
                   fontSize: 17,
                   fontWeight: "700",
                 }}
@@ -198,7 +230,7 @@ const HeelAvsan = () => {
                 height: 44,
                 objectFit: "contain",
               }}
-              source={require("../assets/img/calendar.png")}
+              source={require("../assets/img/greyCalendar.png")}
             />
           </View>
         </View>
@@ -221,6 +253,6 @@ const HeelAvsan = () => {
   );
 };
 
-export default HeelAvsan;
+export default HeelAvaagui;
 
 const styles = StyleSheet.create({});

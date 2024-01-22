@@ -156,7 +156,9 @@ const NiitHemjeeOruulah = () => {
           marginBottom: 10,
         }}
       >
-        <Text style={{ color: "white" }}>Хадгалах</Text>
+        <Text style={{ color: "white", fontSize: 12, fontWeight: "600" }}>
+          Хадгалах
+        </Text>
       </TouchableOpacity>
       <StatusBar style="auto" />
     </View>
